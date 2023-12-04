@@ -14,8 +14,8 @@ let checkboxBlue;
 
 function preload() {
   font = loadFont('RubikBubbles-Regular.otf');
-	font2 = loadFont('GT-Cinetype-Regular.OTF');
-	font3 = loadFont('PixelifySans-VariableFont_wght.otf');
+font2 = loadFont('GT-Cinetype-Regular.OTF');
+font3 = loadFont('PixelifySans-VariableFont_wght.otf');
 }
 
 function setup() {
@@ -34,19 +34,19 @@ function setup() {
   sliderAmplitude = createSlider(50, 200, amplitude);
   sliderAmplitude.position(20, 50);
   sliderAmplitude.size(120);
-	sliderAmplitude.addClass("mySliders");	
+  sliderAmplitude.addClass("mySliders");	
 	
 // Create font selector
 	fontSelection = createSelect();
-  fontSelection.position(20, 120);
+  	fontSelection.position(20, 120);
 	fontSelection.style('border-radius', '50px');
 	fontSelection.style('padding', '0.3em')
 	fontSelection.style('background-color', 'rgb(0,255,0)');
 
 // Add font options.
-  fontSelection.option(' Bubbles');
-  fontSelection.option(' Cinetype');
-	fontSelection.option(' Pixel');
+  fontSelection.option('Bubbles');
+  fontSelection.option('Cinetype');
+  fontSelection.option('Pixel');
 	
 }
 
@@ -75,11 +75,11 @@ function draw() {
   rotate(rotationAngle); // Rotate the subsequent drawing operations
 
 	let selection = fontSelection.selected();
-	if(selection == "Font Bubbles") {
+	if(selection == "Bubbles") {
   	textFont(font)
-	} else if(selection == "Font Cinetype") {
+	} else if(selection == "Cinetype") {
 		textFont(font2)
-	} else if(selection == "Font Pixel") {
+	} else if(selection == "Pixel") {
 		textFont(font3)
 	} else {
 		textFont(font)
